@@ -1,27 +1,25 @@
-set number "行番号を表示する
-set title "編集中のファイル名を表示
-set showmatch "括弧入力時の対応する括弧を表示
-syntax on "コードの色分け
-set tabstop=3 "インデントをスペース４つ分に設定
-set cursorline "カーソル行の強調表示
-set clipboard=unnamed "クリップボードをWindowsと連携する"
-set smarttab "新しい行を作った時に高度な自動インデントを行う"
+set number 
+set title
+set showmatch
+set tabstop=3
+set cursorline
+set clipboard=unnamed
+set smarttab
+syntax on
 
-filetype plugin indent on "pluginを使用可能にする
+filetype plugin indent on 
 
 "-------------------------------------------
 "検索
 "-------------------------------------------
-
-set ignorecase "大文字・小文字の区別なく検索する
-set smartcase "検索文字列に追う文字が含まれている場合は区別して検索する
-set wrapscan "検索時に最後まで行ったら最初に戻る
-set incsearch "検索文字の強調表示
+set ignorecase
+set smartcase
+set wrapscan 
+set incsearch 
 
 "-------------------------------------------
 "表示設定
 "-------------------------------------------
-set autoindent
 set expandtab "タブ入力を複数の空白入力に置き換える
 set tabstop=2 "画面上でタブ文字が占める幅
 set shiftwidth=2 "自動インデントでずれる幅
