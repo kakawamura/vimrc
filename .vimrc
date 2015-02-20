@@ -50,6 +50,7 @@ NeoBundle 'jiangmiao/simple-javascript-indenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-endwise'
+NeoBundle 'wincent/Command-T'
 
 "------------------------------------------- 
 " MAPPING 
