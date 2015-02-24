@@ -19,31 +19,35 @@ set expandtab
 set tabstop=2 
 set shiftwidth=2
 set softtabstop=2 
-set autoindent 
-set smartindent 
+"set autoindent 
+"set smartindent 
 set mouse=a " enable mouse
 
 "-------------------------------------------
 " NeoBundle plugins
 "-------------------------------------------
-set nocompatible               " Be iMproved
-filetype off                   " Required!
+
+if !1 | finish | endif
 
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  if &compatible
+    set nocompatible
+  endif
+
+  set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
-filetype plugin indent on     " Required!
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-if neobundle#exists_not_installed_bundles()
-   echomsg 'Not installed bundles : ' . \ string(neobundle#get_not_installed_bundle_names())
-   echomsg 'Please execute ":NeoBundleInstall" command.'
-endif
+call neobundle#end()
+
+filetype plugin indent on
+
+NeoBundleCheck
 
 NeoBundle 'tpope/vim-surround'
-
 NeoBundle 'rstacruz/sparkup'
 NeoBundle 'mattn/emmet-vim' "html5: <c-t> ,
   let g:user_emmet_leader_key = '<c-t>'
