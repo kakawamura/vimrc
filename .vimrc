@@ -19,8 +19,8 @@ set expandtab
 set tabstop=2 
 set shiftwidth=2
 set softtabstop=2 
-"set autoindent 
-"set smartindent 
+set autoindent 
+set smartindent 
 set mouse=a " enable mouse
 
 "-------------------------------------------
@@ -62,4 +62,6 @@ NeoBundle 'tpope/vim-rails'
 " MAPPING 
 "-------------------------------------------
 let mapleader=","
-nnoremap ; :
+" nnoremap ; :
+noremap <Leader>w :w<CR>
+noremap <Leader>q :wq<CR>
