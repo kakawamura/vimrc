@@ -1,20 +1,18 @@
+syntax on
+colorscheme elflord
 set number 
+filetype plugin indent on 
+
 set title
 set showmatch
 set tabstop=3
 set cursorline
 set clipboard=unnamed
 set smarttab
-syntax on
-colorscheme elflord
-
-filetype plugin indent on 
-
 set ignorecase
 set smartcase
+set hls
 set wrapscan 
-set incsearch 
-
 set expandtab 
 set tabstop=2 
 set shiftwidth=2
@@ -58,10 +56,8 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
 
 "------------------------------------------- 
-"
 " MAPPING 
 "-------------------------------------------
 let mapleader=","
-" nnoremap ; :
 noremap <Leader>w :w<CR>
 noremap <Leader>q :wq<CR>
