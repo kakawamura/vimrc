@@ -20,6 +20,7 @@ set softtabstop=2
 set autoindent 
 set smartindent 
 set mouse=a " enable mouse
+set nrformats= "treat all numerals as decimal
 
 "-------------------------------------------
 " NeoBundle plugins
