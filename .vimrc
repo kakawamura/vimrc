@@ -55,6 +55,9 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
+NeoBundle '2072/PHP-Indenting-for-VIm'
+NeoBundle 'othree/html5-syntax.vim'
+NeoBundle 'othree/html5.vim'
 
 "------------------------------------------- 
 " MAPPING 
