@@ -1,4 +1,3 @@
-" testing commit
 syntax on
 colorscheme elflord
 set number 
@@ -59,6 +58,7 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle '2072/PHP-Indenting-for-VIm'
 NeoBundle 'othree/html5-syntax.vim'
 NeoBundle 'othree/html5.vim'
+NeoBundle 'hynek/vim-python-pep8-indent'
 
 "------------------------------------------- 
 " MAPPING 
