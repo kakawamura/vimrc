@@ -5,7 +5,6 @@ filetype plugin indent on
 
 set title
 set showmatch
-set tabstop=3
 set cursorline
 set clipboard=unnamed
 set smarttab
@@ -14,9 +13,9 @@ set smartcase
 set hls
 set wrapscan 
 set expandtab 
-set tabstop=2 
-set shiftwidth=2
-set softtabstop=2 
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set autoindent 
 set smartindent 
 set mouse=a " enable mouse
@@ -66,3 +65,8 @@ NeoBundle 'hynek/vim-python-pep8-indent'
 let mapleader=","
 noremap <Leader>w :w<CR>
 noremap <Leader>q :wq<CR>
+
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> [B :blast<CR>
