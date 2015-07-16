@@ -1,5 +1,6 @@
 syntax on
-colorscheme elflord
+colorscheme molokai
+set t_Co=256
 set number 
 filetype plugin indent on 
 
