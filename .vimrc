@@ -3,7 +3,7 @@ colorscheme molokai
 set t_Co=256
 set number 
 filetype plugin indent on 
-
+autocmd BufNewFile,BufRead *.slim set ft=slim
 set title
 set showmatch
 set cursorline
@@ -21,6 +21,10 @@ set autoindent
 set smartindent 
 set mouse=a " enable mouse
 set nrformats= "treat all numerals as decimal
+" vimにcoffeeファイルタイプを認識させる
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+" " インデントを設定
+autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
 
 "-------------------------------------------
 " NeoBundle plugins
@@ -40,7 +44,6 @@ call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-call neobundle#end()
 
 filetype plugin indent on
 
@@ -59,6 +62,10 @@ NeoBundle '2072/PHP-Indenting-for-VIm'
 NeoBundle 'othree/html5-syntax.vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'hynek/vim-python-pep8-indent'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'kchmck/vim-coffee-script'
+
+call neobundle#end()
 
 "------------------------------------------- 
 " MAPPING 
@@ -71,3 +78,5 @@ nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> [B :blast<CR>
+
+nnoremap <silent> Y y$
