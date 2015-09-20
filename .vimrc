@@ -14,9 +14,9 @@ set smartcase
 set hls
 set wrapscan 
 set expandtab 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set autoindent 
 set smartindent 
 set mouse=a " enable mouse
@@ -64,6 +64,9 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'basyura/unite-rails'
 
 call neobundle#end()
 
@@ -74,9 +77,18 @@ let mapleader=","
 noremap <Leader>w :w<CR>
 noremap <Leader>q :wq<CR>
 
+" バッファ移動系
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> [B :blast<CR>
+
+" スプリットウインドウ系
+nnoremap <silent> ss :split<CR>
+nnoremap <silent> sv :vsplit<CR>
+nnoremap <silent> sh <C-w>h<CR>
+nnoremap <silent> sj <C-w>j<CR>
+nnoremap <silent> sk <C-w>k<CR>
+nnoremap <silent> sl <C-w>l<CR>
 
 nnoremap <silent> Y y$
