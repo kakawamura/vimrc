@@ -91,4 +91,9 @@ nnoremap <silent> sj <C-w>j<CR>
 nnoremap <silent> sk <C-w>k<CR>
 nnoremap <silent> sl <C-w>l<CR>
 
+" タブページ系
+nnoremap <silent> st :tabnew<CR>
+nnoremap <silent> sn gt<CR>
+nnoremap <silent> sp gT<CR>
+
 nnoremap <silent> Y y$
