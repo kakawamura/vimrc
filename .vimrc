@@ -93,7 +93,7 @@ nnoremap <silent> sl <C-w>l<CR>
 
 " タブページ系
 nnoremap <silent> st :tabnew<CR>
-nnoremap <silent> sn gt<CR>
-nnoremap <silent> sp gT<CR>
+nnoremap <silent> s<Right> gt<CR>
+nnoremap <silent> s<Left> gT<CR>
 
 nnoremap <silent> Y y$
