@@ -1,7 +1,7 @@
 ##My vimrc
 ###--SETUP--
 
-```shell
+```bash
 git clone https://www.github.com/waka-ka/vimrc.git
 ln -s ~/.vimrc/.vimrc ~/.vimrc
 mkdir .vim
