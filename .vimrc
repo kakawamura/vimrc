@@ -3,7 +3,7 @@ colorscheme molokai
 set t_Co=256
 set number 
 filetype plugin indent on 
-
+autocmd BufNewFile,BufRead *.slim set ft=slim
 set title
 set showmatch
 set cursorline
@@ -14,19 +14,20 @@ set smartcase
 set hls
 set wrapscan 
 set expandtab 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set autoindent 
 set smartindent 
 set mouse= " enable mouse
 set nrformats= "treat all numerals as decimal
+" vimにcoffeeファイルタイプを認識させる
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+" " インデントを設定
+autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
 
 " new setup from the book
 set wildmenu wildmode=list:full
-
-
-
 
 "-------------------------------------------
 " NeoBundle plugins
@@ -46,7 +47,6 @@ call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-call neobundle#end()
 
 filetype plugin indent on
 
@@ -65,6 +65,13 @@ NeoBundle '2072/PHP-Indenting-for-VIm'
 NeoBundle 'othree/html5-syntax.vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'hynek/vim-python-pep8-indent'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'basyura/unite-rails'
+
+call neobundle#end()
 
 "------------------------------------------- 
 " MAPPING 
@@ -75,10 +82,26 @@ noremap \ ,
 noremap <Leader>w :w<CR>
 noremap <Leader>q :wq<CR>
 
+" バッファ移動系
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> [B :blast<CR>
+
+" スプリットウインドウ系
+nnoremap <silent> ss :split<CR>
+nnoremap <silent> sv :vsplit<CR>
+nnoremap <silent> sh <C-w>h<CR>
+nnoremap <silent> sj <C-w>j<CR>
+nnoremap <silent> sk <C-w>k<CR>
+nnoremap <silent> sl <C-w>l<CR>
+
+" タブページ系
+nnoremap <silent> st :tabnew<CR>
+nnoremap <silent> s<Right> gt<CR>
+nnoremap <silent> s<Left> gT<CR>
+
+nnoremap <silent> Y y$
 
 " turn off IME when going out from insert mode
 inoremap <ESC> <ESC>:set iminsert=0<CR>
