@@ -102,6 +102,3 @@ nnoremap <silent> s<Right> gt<CR>
 nnoremap <silent> s<Left> gT<CR>
 
 nnoremap <silent> Y y$
-
-" turn off IME when going out from insert mode
-inoremap <ESC> <ESC>:set iminsert=0<CR>
