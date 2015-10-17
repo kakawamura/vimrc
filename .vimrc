@@ -19,8 +19,14 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent 
 set smartindent 
-set mouse=a " enable mouse
+set mouse= " enable mouse
 set nrformats= "treat all numerals as decimal
+
+" new setup from the book
+set wildmenu wildmode=list:full
+
+
+
 
 "-------------------------------------------
 " NeoBundle plugins
@@ -64,6 +70,8 @@ NeoBundle 'hynek/vim-python-pep8-indent'
 " MAPPING 
 "-------------------------------------------
 let mapleader=","
+noremap \ ,
+
 noremap <Leader>w :w<CR>
 noremap <Leader>q :wq<CR>
 
@@ -71,3 +79,6 @@ nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> [B :blast<CR>
+
+" turn off IME when going out from insert mode
+inoremap <ESC> <ESC>:set iminsert=0<CR>
