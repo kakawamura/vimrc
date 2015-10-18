@@ -1,7 +1,7 @@
 syntax on
 colorscheme molokai
 set t_Co=256
-set number 
+set relativenumber
 filetype plugin indent on 
 autocmd BufNewFile,BufRead *.slim set ft=slim
 set title
@@ -69,6 +69,7 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/neocomplete.vim'
 
 call neobundle#end()
 
