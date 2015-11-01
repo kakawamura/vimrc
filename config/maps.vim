@@ -33,11 +33,25 @@ nnoremap <silent> Y y$
 " Fuzzy Finder
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
+" Use ag(The Silver Searcher) for Unite grep
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
 " Buffers, current directory files, files in subdirectories(all)
 noremap <C-l> :Unite -start-insert buffer file file_rec/async:!<CR>
+
+" show buffer
 noremap <C-p> :Unite buffer<CR>
+
 " Most Recently Used Files
 noremap <C-z> :Unite file_mru<CR>
+
+" Unite Grep
+nnoremap <C-g> :Unite grep:. -no-split -buffer-name=search-buffer<CR>
+
 
 " ------------------
 "  Fugitive

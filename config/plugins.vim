@@ -40,4 +40,3 @@ NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 
 call neobundle#end()
-
