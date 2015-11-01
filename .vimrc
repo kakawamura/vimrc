@@ -7,7 +7,7 @@
 
 let g:neocomplete#enable_at_startup = 1
 
-source ~/vimrc/config/general.vim
+source ~/vimrc/confi /general.vim
 source ~/vimrc/config/plugins.vim
 source ~/vimrc/config/maps.vim
 

@@ -31,8 +31,13 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'kchmck/vim-coffee-script'
 
 NeoBundle 'Shougo/unite.vim'
+" To search most recent file using unite
 NeoBundle 'Shougo/neomru.vim'
+" To use fuzzy finder vimproc is recomended
+NeoBundle 'Shougo/vimproc.vim'
 
+" Code completion
 NeoBundle 'Shougo/neocomplete.vim'
 
 call neobundle#end()
+
