@@ -29,6 +29,9 @@ autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
 " new setup from the book
 set wildmenu wildmode=list:full
 
+" use complete
+let g:neocomplete#enable_at_startup = 1
+
 "-------------------------------------------
 " NeoBundle plugins
 "-------------------------------------------
@@ -60,15 +63,15 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'rstacruz/sparkup'
 NeoBundle 'jiangmiao/simple-javascript-indenter'
 NeoBundle '2072/PHP-Indenting-for-VIm'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'basyura/unite-rails'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'othree/html5-syntax.vim'
 NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'kchmck/vim-coffee-script'
+
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+
 NeoBundle 'Shougo/neocomplete.vim'
 
 call neobundle#end()
@@ -102,3 +105,9 @@ nnoremap <silent> s<Right> gt<CR>
 nnoremap <silent> s<Left> gT<CR>
 
 nnoremap <silent> Y y$
+
+" unite
+nnoremap <C-l> :Unite file file_rec buffer<CR>
+noremap <C-p> :Unite buffer<CR>
+noremap <C-n> :Unite -buffer-name=file file<CR>
+noremap <C-z> :Unite file_mru<CR>
