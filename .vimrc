@@ -1,30 +1,4 @@
-syntax on
-colorscheme molokai
-set t_Co=256
-set relativenumber
-filetype plugin indent on 
-autocmd BufNewFile,BufRead *.slim set ft=slim
-set title
-set showmatch
-set cursorline
-set clipboard=unnamed
-set smarttab
-set ignorecase
-set smartcase
-set hls
-set wrapscan 
-set expandtab 
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set autoindent 
-set smartindent 
-set mouse= " enable mouse
-set nrformats= "treat all numerals as decimal
-" vimにcoffeeファイルタイプを認識させる
-au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
-" " インデントを設定
-autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
+source ~/vimrc/config/general.vim
 
 " new setup from the book
 set wildmenu wildmode=list:full
