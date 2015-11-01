@@ -2,6 +2,7 @@ syntax on
 colorscheme molokai
 filetype plugin indent on 
 set t_Co=256
+set number
 set relativenumber
 set title
 set showmatch
