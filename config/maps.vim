@@ -42,10 +42,10 @@ if executable('ag')
 endif
 
 " Buffers, current directory files, files in subdirectories(all)
-noremap <C-l> :Unite -start-insert buffer file file_rec/async:!<CR>
+" noremap <C-l> :Unite -start-insert buffer file file_rec/async:!<CR>
 
 " show buffer
-noremap <C-p> :Unite buffer<CR>
+noremap <C-l> :Unite buffer<CR>
 
 " Most Recently Used Files
 noremap <C-z> :Unite file_mru<CR>

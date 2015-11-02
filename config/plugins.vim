@@ -36,6 +36,8 @@ NeoBundle 'Shougo/neomru.vim'
 " To use fuzzy finder vimproc is recomended
 NeoBundle 'Shougo/vimproc.vim'
 
+NeoBundle 'kien/ctrlp.vim'
+
 " Code completion
 NeoBundle 'Shougo/neocomplete.vim'
 
