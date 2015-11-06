@@ -1,5 +1,5 @@
 ##vimrc
 
-`shell
+`
 setup.sh
 `
