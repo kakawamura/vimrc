@@ -53,6 +53,8 @@ noremap <C-z> :Unite file_mru<CR>
 " Unite Grep
 nnoremap <C-g> :Unite grep:. -no-split -buffer-name=search-buffer<CR>
 
+" Create new file
+nnoremap <C-n> :Unite file/new<CR>
 
 " ------------------
 "  Fugitive
