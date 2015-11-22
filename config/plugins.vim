@@ -41,4 +41,7 @@ NeoBundle 'kien/ctrlp.vim'
 " Code completion
 NeoBundle 'Shougo/neocomplete.vim'
 
+" File explorer
+NeoBundle 'Shougo/vimfiler.vim'
+
 call neobundle#end()
