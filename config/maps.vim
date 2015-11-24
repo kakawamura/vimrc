@@ -59,6 +59,12 @@ nnoremap <C-n> :Unite file/new<CR>
 
 nnoremap <Leader>g :Ggrep 
 
+" ------------------
+"  VimFiler
+" ------------------
+nnoremap <Leader>v :VimFilerExplorer<CR>
+
+
 " Use ag(The Silver Searcher) for Unite grep
 let g:unite_source_grep_max_candidates = 200
 
