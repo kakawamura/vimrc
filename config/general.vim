@@ -1,4 +1,6 @@
 syntax on
+" colorscheme molokai
+set background=dark
 colorscheme molokai
 filetype plugin indent on 
 set t_Co=256

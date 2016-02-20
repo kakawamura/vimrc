@@ -44,4 +44,22 @@ NeoBundle 'Shougo/neocomplete.vim'
 " File explorer
 NeoBundle 'Shougo/vimfiler.vim'
 
+" Pathogon for vim volor
+NeoBundle 'tpope/vim-pathogen'
+
+" JSX syntax highlighting
+NeoBundle 'mxw/vim-jsx'
+
+" Java completion
+NeoBundleLazy 'vim-scripts/javacomplete', {
+\   'build': {
+\       'cygwin': 'javac autoload/Reflection.java',
+\       'mac': 'javac autoload/Reflection.java',
+\       'unix': 'javac autoload/Reflection.java',
+\   },
+\}
+
 call neobundle#end()
+
+autocmd FileType java :setlocal omnifunc=javacomplete#Complete
+autocmd FileType java :setlocal completefunc=javacomplete#CompleteParamsInfo
