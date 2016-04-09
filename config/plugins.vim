@@ -36,6 +36,7 @@ NeoBundle 'Shougo/neomru.vim'
 " To use fuzzy finder vimproc is recomended
 NeoBundle 'Shougo/vimproc.vim'
 
+" Fuzzy Finder
 NeoBundle 'kien/ctrlp.vim'
 
 " Code completion
@@ -49,6 +50,9 @@ NeoBundle 'tpope/vim-pathogen'
 
 " JSX syntax highlighting
 NeoBundle 'mxw/vim-jsx'
+
+NeoBundle 'fatih/vim-go'
+
 
 " Java completion
 NeoBundleLazy 'vim-scripts/javacomplete', {
