@@ -9,6 +9,7 @@ set relativenumber
 set title
 set showmatch
 set cursorline
+set cursorcolumn
 set clipboard=unnamed
 set smarttab
 set ignorecase
