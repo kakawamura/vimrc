@@ -1,7 +1,13 @@
 syntax on
-" colorscheme molokai
-set background=dark
-colorscheme molokai
+
+if has('gui_macvim')
+  set background=light
+  colorscheme flattened_light
+else
+  set background=dark
+  colorscheme molokai
+endif
+
 filetype plugin indent on 
 set t_Co=256
 set number
