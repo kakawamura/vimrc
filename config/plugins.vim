@@ -1,69 +1,70 @@
-if !1 | finish | endif
-
-if has('vim_starting')
-  if &compatible
-    set nocompatible
-  endif
-
-  set runtimepath+=~/.vim/bundle/neobundle.vim
+if &compatible
+  set nocompatible
 endif
 
-call neobundle#begin(expand('~/.vim/bundle'))
+" Required:
+set runtimepath^=/Users/kazushi/.vim//repos/github.com/Shougo/dein.vim
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+" Required:
+call dein#begin(expand('/Users/kazushi/.vim/'))
 
-NeoBundleCheck
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
 
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-rails'
+" Add or remove your plugins here:
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+
+" You can specify revision/branch/tag.
+call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+call dein#add('tpope/vim-surround')
+call dein#add('tpope/vim-endwise')
+call dein#add('tpope/vim-rails')
 
 " git
-NeoBundle 'tpope/vim-fugitive'
+call dein#add('tpope/vim-fugitive')
 
-NeoBundle 'rstacruz/sparkup'
-NeoBundle 'jiangmiao/simple-javascript-indenter'
-NeoBundle '2072/PHP-Indenting-for-VIm'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'othree/html5-syntax.vim'
-NeoBundle 'hynek/vim-python-pep8-indent'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'kchmck/vim-coffee-script'
+call dein#add('rstacruz/sparkup')
+call dein#add('jiangmiao/simple-javascript-indenter')
+call dein#add('2072/PHP-Indenting-for-VIm')
+call dein#add('othree/html5.vim')
+call dein#add('othree/html5-syntax.vim')
+call dein#add('hynek/vim-python-pep8-indent')
+call dein#add('slim-template/vim-slim')
+call dein#add('kchmck/vim-coffee-script')
 
-NeoBundle 'Shougo/unite.vim'
+call dein#add('Shougo/unite.vim')
 " To search most recent file using unite
-NeoBundle 'Shougo/neomru.vim'
+call dein#add('Shougo/neomru.vim')
 " To use fuzzy finder vimproc is recomended
-NeoBundle 'Shougo/vimproc.vim'
+call dein#add('Shougo/vimproc.vim')
 
 " Fuzzy Finder
-NeoBundle 'kien/ctrlp.vim'
+call dein#add('kien/ctrlp.vim')
 
 " Code completion
-NeoBundle 'Shougo/neocomplete.vim'
+call dein#add('Shougo/neocomplete.vim')
 
 " File explorer
-NeoBundle 'Shougo/vimfiler.vim'
+call dein#add('Shougo/vimfiler.vim')
 
 " Pathogon for vim volor
-NeoBundle 'tpope/vim-pathogen'
+call dein#add('tpope/vim-pathogen')
 
 " JSX syntax highlighting
-NeoBundle 'mxw/vim-jsx'
+call dein#add('mxw/vim-jsx')
 
-NeoBundle 'fatih/vim-go'
+call dein#add('fatih/vim-go')
 
+" Required:
+call dein#end()
 
-" Java completion
-NeoBundleLazy 'vim-scripts/javacomplete', {
-\   'build': {
-\       'cygwin': 'javac autoload/Reflection.java',
-\       'mac': 'javac autoload/Reflection.java',
-\       'unix': 'javac autoload/Reflection.java',
-\   },
-\}
+" Required:
+filetype plugin indent on
 
-call neobundle#end()
-
-autocmd FileType java :setlocal omnifunc=javacomplete#Complete
-autocmd FileType java :setlocal completefunc=javacomplete#CompleteParamsInfo
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
