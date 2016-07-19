@@ -32,7 +32,7 @@ set autoindent
 set smartindent 
 set mouse= " enable mouse
 set nrformats= "treat all numerals as decimal
-set magic?
+set magic
 
 autocmd BufNewFile,BufRead,BufReadPre *.slim set filetype=slim
 autocmd BufNewFile,BufRead,BufReadPre *.coffee set filetype=coffee
