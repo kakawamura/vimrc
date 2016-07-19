@@ -3,10 +3,10 @@ if &compatible
 endif
 
 " Required:
-set runtimepath^=/Users/kazushi/.vim//repos/github.com/Shougo/dein.vim
+set runtimepath^=~/.vim//repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin(expand('/Users/kazushi/.vim/'))
+call dein#begin(expand('~/.vim/'))
 
 " Let dein manage dein
 " Required:

@@ -9,12 +9,9 @@ if [ ! -d ~/.vim ]; then
     mkdir ~/.vim
 fi
 
-if [ ! -d ~/.vim/bundle ]; then
-    echo "creating ~/.vim/bundle";
-    mkdir ~/.vim/bundle
-fi
-
-git clone https://www.github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+echo "getting installer for dein.vim"
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh installer.sh ~/.vim
 
 if [ ! -d ~/.vim/colors ]; then
     echo "creating ~/.vim/colors";
