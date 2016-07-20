@@ -58,6 +58,8 @@ call dein#add('mxw/vim-jsx')
 
 call dein#add('fatih/vim-go')
 
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+
 " Required:
 call dein#end()
 
