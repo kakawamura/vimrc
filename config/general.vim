@@ -6,8 +6,7 @@ if has('gui_macvim')
 else
   set background=dark
   " colorscheme flattened_dark
-  " set background=dark
-  " colorscheme molokai
+  colorscheme molokai
 endif
 
 filetype plugin indent on 
