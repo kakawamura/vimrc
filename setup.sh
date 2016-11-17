@@ -22,6 +22,6 @@ git clone https://github.com/tomasr/molokai ~/.vim/molokai
 mv ~/.vim/molokai/colors/molokai.vim ~/.vim/colors
 rm -rf ~/.vim/molokai
 
-git clone https://github.com/romainl/flattene://github.com/romainl/flattened 
+git clone https://github.com/romainl/flattened ~/.vim/flattened
 mv ~/.vim/flattened/colors/flattened_light.vim ~/.vim/colors
 rm -rf ~/.vim/flattened

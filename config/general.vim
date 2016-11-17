@@ -1,12 +1,13 @@
 syntax on
 
+set background=light
+colorscheme flattened_light
+
 if has('gui_macvim')
-  set background=light
-  colorscheme flattened_light
 else
-  set background=dark
+  " set background=dark
   " colorscheme flattened_dark
-  colorscheme molokai
+  " colorscheme molokai
 endif
 
 filetype plugin indent on 
