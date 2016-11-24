@@ -34,6 +34,7 @@ set mouse= " enable mouse
 set nrformats= "treat all numerals as decimal
 set magic
 set encoding=utf-8
+set clipboard=unnamed
 
 autocmd BufNewFile,BufRead,BufReadPre *.slim set filetype=slim
 autocmd BufNewFile,BufRead,BufReadPre *.coffee set filetype=coffee

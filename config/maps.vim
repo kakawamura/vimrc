@@ -11,13 +11,19 @@ nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> [B :blast<CR>
 nnoremap <Leader>b :bdelete<CR>
 
-" スプリットウインドウ系
+" スプリットウインドウ
 nnoremap <silent> ss :split<CR>
 nnoremap <silent> sv :vsplit<CR>
 nnoremap <silent> sh <C-w>h<CR>
 nnoremap <silent> sj <C-w>j<CR>
 nnoremap <silent> sk <C-w>k<CR>
 nnoremap <silent> sl <C-w>l<CR>
+
+nnoremap <silent> s= <C-w>=<CR>
+nnoremap <silent> s> <C-w>><CR>
+nnoremap <silent> s< <C-w><<CR>
+nnoremap <silent> s+ <C-w>+<CR>
+nnoremap <silent> s- <C-w>-<CR>
 
 " タブページ系
 nnoremap <silent> st :tabnew<CR>
