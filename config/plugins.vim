@@ -56,9 +56,13 @@ call dein#add('tpope/vim-pathogen')
 " JSX syntax highlighting
 call dein#add('mxw/vim-jsx')
 
+call dein#add('pangloss/vim-javascript')
+
 call dein#add('fatih/vim-go')
 
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+
+call dein#add('mattn/emmet-vim')
 
 " Required:
 call dein#end()
